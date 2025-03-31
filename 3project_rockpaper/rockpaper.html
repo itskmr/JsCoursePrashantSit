@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="rock" onclick=" 
+        let comSelection = Math.ceil(Math.random()*3) ;
+    console.log('Your have selected Rock')
+    let compChoice = ''
+    if (comSelection == 1 ){
+compChoice = 'rock'
+    } else if (comSelection == 2){
+        compChoice = 'paper'
+    } else {
+        compChoice = 'scissor'
+    }
+    console.log(`Computer choice is ${compChoice}`)
+
+    if (compChoice === 'rock') {alert ( 'Match have been tied  ')} 
+    else if ( compChoice === 'paper') { alert ( ' Computer won the match ')}
+    else  { alert (' Player won the match ')}
+    "> rock </button>
+
+
+    <button id="paper" onclick=" 
+    let comSelection = Math.ceil(Math.random()*3) ;
+console.log('Your have selected Rock')
+let compChoice = ''
+if (comSelection == 1 ){
+compChoice = 'rock'
+} else if (comSelection == 2){
+    compChoice = 'paper'
+} else {
+    compChoice = 'scissor'
+}
+console.log(`Computer choice is ${compChoice}`)
+
+if (compChoice === 'paper') {alert ( 'Match have been tied  ')} 
+else if ( compChoice === 'scissor') { alert ( ' Computer won the match ')}
+else  { alert (' Player won the match ')}
+"> paper </button>
+    <button id="scissor" onclick=" userSelection = 3 ; "> scissor </button>
+
+
+    <script>
+        let userSelection = 0;
+        let comSelection = ''
+
+
+        if (userSelection == comSelection) {
+            console.log('Both have choosed rock game tied')
+        }
+    </script>
+</body>
+
+</html>

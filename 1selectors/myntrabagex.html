@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="add-to-bag" onclick=" 
+    item = item + 1 ; 
+    console.log(item);
+    document.querySelector('p').innerHTML = ` Your bag has ${item} items `
+       
+        
+        ">
+        Add to Bag </button>
+    <button id="whislist" onclick="
+    alert('your item is added to whislist')
+    "> Move to whislist </button>
+    <button id="add-two" onclick="
+    
+    item= item + 2 ; 
+    console.log(item) ;
+    document.querySelector('p').innerHTML = ` Your bag has ${item} items `
+    "> Add 1 + 1 item </button>
+    <p> your bag has 0 items </p>
+
+    <script>
+        let item = 0;
+        document.querySelector('p').innerHTML = ` Your bag has ${item} items ` ;
+
+
+    </script>
+</body>
+
+</html>

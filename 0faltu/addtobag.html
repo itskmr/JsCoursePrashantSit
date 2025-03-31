@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="increment-button" onclick="alert('Item has been added into cart')
+    count = count + 1;
+    document.querySelector('p').innerText = `The cart has ${count} items`;
+    "> Add to bag </button>
+    <button id="incrementBy2-button" onclick="
+    count = count +2 ;
+    document.querySelector('p').innerText = `The cart has ${count} items`;
+    "
+    
+    > +2 </button>
+    <button id="minus-one" onclick="
+    count = count - 1;
+
+    document.querySelector('p').innerText = `The cart has ${count} items`;
+    "
+    > - </button>
+    <p> The cart has 0 items  </p>
+
+
+    <script>
+        let count = 0;
+        document.querySelector("p").innerText = `The cart has ${count} items`;
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

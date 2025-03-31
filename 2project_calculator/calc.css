@@ -1,0 +1,13 @@
+#calculator {
+/* display: flex; */
+    border: 1px solid black ;
+    height: 80vh;
+    width: 150px;
+  
+}
+
+#display {
+
+    top: 30px;
+
+}
