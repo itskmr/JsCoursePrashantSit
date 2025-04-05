@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .buttons {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="buttons" onclick="
+    // let playerChoice = 'rock'
+    // console.log(`Player had choosed ${playerChoice}`)
+    let compChoice = showChoose()
+    // console.log(showChoose())
+    // console.log(compChoice)
+    playerChoice = 'rock'
+    let result = rockinput(playerChoice,compChoice)
+    output(playerChoice , compChoice , result)
+        "> Rock </button>
+
+
+    <button class="buttons" onclick="
+ compChoice = showChoose()
+ playerChoice = 'paper'
+    result = paperinput(playerChoice,compChoice)
+    output(playerChoice , compChoice , result)
+    
+    "> Paper </button>
+
+    <button class="buttons" onclick="
+     compChoice = showChoose()
+ playerChoice = 'scissor'
+    result = scissorinput(playerChoice,compChoice)
+    output(playerChoice , compChoice , result)
+    "> Scissors </button>
+
+
+    <script>
+        let userSelection = ''
+        let compSelection = ''
+        let playerChoice = ''
+
+        function showChoose() {
+            let randNumber = Math.ceil(Math.random() * 3);
+
+            if (randNumber == 1) {
+                // console.log('Computer have choosed Rock ')
+                return 'rock'
+            }
+            else if (randNumber == 2) {
+                // console.log('Computer have choosed Paper')
+                return 'paper'
+            }
+            else {
+                // console.log('Computer have choosed Scissors')
+                return 'scissor'
+            }
+        }
+function output(playerChoice , compChoice , result){
+    console.log(` Player had choosed ${playerChoice} and computer had choosed ${compChoice}`)
+    console.log(result)
+  
+}
+        function rockinput(playerChoice , compChoice) {
+            if (playerChoice == compChoice) {
+                return 'Match tied'
+            }
+
+            else if (playerChoice === 'rock' && compChoice === 'paper') {
+                return 'Computer win the game'
+            }
+
+            else (playerChoice === 'rock' && compChoice === 'scissor')
+            {
+                return 'Player won the game'
+            }
+        }
+
+        function paperinput(playerChoice , compChoice){
+            if (playerChoice == compChoice) {
+                return 'Match tied'
+            }
+
+            else if (playerChoice === 'paper' && compChoice === 'rock') {
+                return 'Player win the game'
+            }
+
+            else (playerChoice === 'paper' && compChoice === 'scissor')
+            {
+                return 'Computer won the game'
+            }
+        }
+
+        function scissorinput(playerChoice , compChoice){
+            if (playerChoice == compChoice) {
+                return 'Match tied'
+            }
+
+            else if (playerChoice === 'scissor' && compChoice === 'rock') {
+                return 'Computer win the game'
+            }
+
+            else (playerChoice === 'scissor' && compChoice === 'paper')
+            {
+                return 'player won the game'
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

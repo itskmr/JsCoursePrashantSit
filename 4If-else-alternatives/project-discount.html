@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = 56 ; 
+let metroFare = 100 ;
+let gender = 'female' ; 
+if (age <= 5 ) {
+    metroFare = 0 ;
+}
+
+else if (gender === 'female') {
+    metroFare =  metroFare - (metroFare*50)/100 ;
+}
+
+
+else if (age <=8 ) {
+    metroFare = metroFare / 2 
+}
+
+else if ( age >= 65 ){
+    metroFare = metroFare - (metroFare*30)/100 
+}
+
+else {metroFare = metroFare ; }
+
+console.log(metroFare)
+
+
+
+    </script>
+</body>
+</html>

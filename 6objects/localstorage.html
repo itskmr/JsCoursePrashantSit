@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Local storage mai value store and get karne ke liye 
+
+// localStorage.setItem('myName' , 'Ronit Kumar')
+// localStorage.setItem('myPhoneNo' , '8287999852')
+
+// console.log(localStorage.getItem('myName'))
+
+let product = {
+    name: 'Ronit Kumar',
+    age : 14 , 
+}
+
+// localStorage.setItem('product' , JSON.stringify(product))
+console.log('First time printing') 
+console.log(product)
+
+let product2 = JSON.parse(localStorage.getItem('product'))
+console.log(product2)
+console.log(product2.name)
+console.log(product2.age)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

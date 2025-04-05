@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+/* Title styling */
+p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input fields styling */
+.input-target,
+.input-target2 {
+    padding: 10px;
+    margin: 10px 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.input-target {
+    width: 300px;
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1557b0;
+}
+
+/* Todo container styling */
+.toDoBox {
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Individual todo item styling */
+.toDoBox div {
+    background-color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Todo text styling */
+.toDoBox span {
+    margin-right: 15px;
+    color: #333;
+}
+
+/* Delete button styling */
+.toDoBox button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toDoBox button:hover {
+    background-color: #b02a37;
+}
+    </style>
+</head>
+
+<body>
+    <p> To Do App </p>
+    <input class="input-target" type="text" placeholder="Enter your todo here">
+    <input class="input-target2"  type="date">
+    <button class="btn" onclick="
+    addToDo();
+    "> Add Todo </button>
+    <div class="toDoBox">
+
+    </div>
+
+
+    <script>
+        let toDoArray = [];
+        function addToDo() {
+            let inputTargetVar = document.querySelector('.input-target')
+            let item = inputTargetVar.value;
+
+            let inputTargetVar2 = document.querySelector('.input-target2')
+            let dueDate = inputTargetVar2.value;
+
+            console.log(item)
+            console.log(dueDate)
+
+            // let finalInput = ` ${inputTargetValue} ${inputTargetValue2} ` ;
+            // console.log(finalInput)
+
+            toDoArray.push({item : item , dueDate : dueDate})
+            inputTargetVar.value =''
+            inputTargetVar2.value =''
+
+
+            // for date field 
+
+
+            displayToDo();
+
+        }
+
+        function displayToDo() {
+
+            let targetContainer = document.querySelector('.toDoBox');
+            let newRow = ''    // blank row jo hum bar bar push karayenge 
+            
+            for (i = 0; i < toDoArray.length; i++) {
+                let {item , dueDate } = toDoArray[i]
+                newRow = ` ${newRow}
+               <div>    <span> ${item} <span/>  <span> ${dueDate} <span/> 
+                 <button onclick='toDoArray.splice(${i},1); displayToDo();'>  Delete </button>
+                  <div/> `
+                console.log(newRow)
+            }
+
+            // and update it in container always 
+
+            targetContainer.innerHTML = newRow ;
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

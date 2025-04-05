@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let product = {
+            name : 'jeans',
+            size : 38 , 
+
+        };
+
+        let product2 = {
+            name : 'jeans' , 
+            size : 38 , 
+        };
+
+        // // let copyProduct = prodcut ;
+        // console.log(product['delievery-time']) ; 
+        // // so it will change in final as well 
+
+        // Comparing two products 
+        function compare (product , product2 ) {
+if ( typeof product !== 'object' && typeof product2 !== 'object'){
+    console.warn("Both are not the objects")
+    return console.log('false')
+}
+
+else if (product == product2) {
+    return console.log('true') ; 
+}
+
+else if (product.name === product2.name && product.size == product2.size){
+    return console.log('true') ;
+}
+else {
+    return console.log('false') ; 
+}
+
+}
+
+compare(product , product2)
+
+
+    </script>
+</body>
+</html>

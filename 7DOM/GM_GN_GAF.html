@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn" onclick="
+    changeColor(count)
+count++
+localStorage.setItem('count' , count)
+        document.querySelector('p').innerText = ` I have been Clicked ${count} times ` ;
+      
+        
+        "> Click me </button>
+    <p> </p>
+    <script>
+
+        let count = localStorage.getItem('count') || 0 ;
+
+        function changeColor(count) {
+            if (count%2 == 0)
+        {
+            document.querySelector('body').style.backgroundColor = 'red';
+        }
+        else
+        {
+            document.querySelector('body').style.backgroundColor = 'blue';
+        }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let time = new Date();
+        console.log(time.getHours())
+        let actuallTime = time.getHours()
+        if (actuallTime >= 5 && actuallTime < 12)
+            console.log('Good Morning');
+        else if (actuallTime >= 12 && actuallTime < 16)
+            console.log('Good Afternoon');
+        else if (actuallTime >= 16 && actuallTime < 21)
+            console.log('Good Evening');
+        else
+            console.log('Good Night');
+
+    </script>
+</body>
+
+</html>
