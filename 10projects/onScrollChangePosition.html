@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn {
+            position: absolute; /* Changed to absolute for free movement */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        body {
+            position: relative;
+            height: 100vh;
+            margin: 0; /* Remove default margin */
+            overflow: hidden; /* Prevent scrolling */
+        }
+    </style>
+</head>
+<body>
+    <div id="btn">
+        <button onmouseover="moveButton()">Click me</button>
+        <p> Click Me </p>
+    </div>
+
+    <script>
+        function moveButton() {
+            let button = document.querySelector("#btn");
+            
+            // Generate random numbers for top and left (within viewport)
+            let maxHeight = window.innerHeight - 50; // Buffer for button height
+            let maxWidth = window.innerWidth - 100;  // Buffer for button width
+            
+            let randomLeft = Math.random() * maxWidth;
+            let randomTop = Math.random() * maxHeight;
+
+            // Apply the new position
+            button.style.left = randomLeft + 'px';
+            button.style.top = randomTop + 'px';
+        }
+    </script>
+</body>
+</html>
