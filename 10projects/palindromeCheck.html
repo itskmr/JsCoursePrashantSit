@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input , button {
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+        }
+        p{
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Enter Your string here :<input id="input-box" type="text">
+        <button id="check" onclick=checkvalue()> Check </button>
+    </h1>
+
+    <p id="final-message"> </p>
+
+    <script>
+        function checkvalue() {
+            let inputTarget = document.querySelector('#input-box')
+            let inputValue = inputTarget.value
+
+            let word = inputValue.replaceAll(' ', '');
+            
+            console.log(word)
+
+            // let word2 = word(: : -1)
+            // doesnt work its for python 
+            let word2 = ''
+            for (let i = word.length - 1; i >= 0; i--) {
+
+                word2 += word[i]
+            }
+            console.log(word2)
+            if(word === word2){
+                document.querySelector('#final-message').innerText = 'The word is palindrome'
+            }
+            else {
+                document.querySelector('#final-message').innerText = 'The word is not palindrome'
+
+            }
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

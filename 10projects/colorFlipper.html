@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 200px;
+            height: 50px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            /* background-color: rgb(120, 130,140 ); */
+        }
+    </style>
+</head>
+
+<body>
+    <button id="green"> Green </button>
+    <button id="red"> Red </button>
+    <button id="blue"> Blue </button>
+    <button id="random"> Random </button>
+
+
+    <script>
+       
+        let btnGreen = document.querySelector('#green')
+        let btnRed = document.querySelector('#red')
+        let btnBlue = document.querySelector('#blue')
+        let btnRandom = document.querySelector('#random')
+
+        let bodyColor = document.querySelector('body')
+
+        let greenColor = event => {
+            bodyColor.style.backgroundColor = 'green'
+        }
+        let redColor = event => {
+            bodyColor.style.backgroundColor = 'red'
+        }
+        let blueColor = event => {
+            bodyColor.style.backgroundColor = 'blue'
+        }
+
+
+        let randomColor = event => {
+            let randno1 = Math.round(Math.random() * 256); // 0-255
+            let randno2 = Math.round(Math.random() * 256); // 0-255
+            let randno3 = Math.round(Math.random() * 256); // 0-255
+            // console.log(`rgb(${randno1}, ${randno2}, ${randno3})`)
+            bodyColor.style.backgroundColor = `rgb(${randno1}, ${randno2}, ${randno3})`;
+        };
+        btnGreen.addEventListener('click', greenColor)
+        btnRed.addEventListener('click', redColor)
+        btnBlue.addEventListener('click', blueColor)
+        btnRandom.addEventListener('click', randomColor)
+    </script>
+</body>
+
+</html>
